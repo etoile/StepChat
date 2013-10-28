@@ -13,9 +13,16 @@ License: Modified BSD
 - (id)init
 {
 	self = [super init];
-	NSString *home = NSHomeDirectory();
-	gPath = [[NSMutableString alloc] initWithString:home];
-	[gPath appendString:@"/GNUstep/Library/Addresses/"];
+		
+    NSArray *libraryDirs = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
+	
+    gPath = [[[libraryDirs objectAtIndex: 0]
+                      stringByAppendingPathComponent: @"Addresses"] mutableCopy];
+	
+    [[NSFileManager defaultManager] createDirectoryAtPath: gPath
+                              withIntermediateDirectories: YES
+                                               attributes: nil
+                                                    error: nil];
 	fileName = @"waJID";
 	filePath = [[NSMutableString alloc] initWithString:gPath];
 	[filePath appendString:fileName];
