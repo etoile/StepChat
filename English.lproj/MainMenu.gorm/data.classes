@@ -20,6 +20,13 @@
 	);
 	Super = NSObject;
     };
+    Ciao = {
+	Actions = (
+	);
+	Outlets = (
+	);
+	Super = NSWindowController;
+    };
     CustomPresenceWindowController = {
 	Actions = (
 	    "okay:",

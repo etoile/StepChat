@@ -13,16 +13,31 @@ License: Modified BSD
 - (id)init
 {
 	self = [super init];
+	NSError *error;
+	BOOL created = NO, isDir = YES;
 		
     NSArray *libraryDirs = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
 	
     gPath = [[[libraryDirs objectAtIndex: 0]
                       stringByAppendingPathComponent: @"Addresses"] mutableCopy];
 	
-    [[NSFileManager defaultManager] createDirectoryAtPath: gPath
-                              withIntermediateDirectories: YES
-                                               attributes: nil
-                                                    error: nil];
+	NSFileManager *fileManager = [NSFileManager defaultManager];
+	BOOL exist = [fileManager fileExistsAtPath:gPath isDirectory:&isDir];
+	if (!exist)
+		created = [[NSFileManager defaultManager] createDirectoryAtPath: gPath
+                                                 withIntermediateDirectories: YES
+                                                                  attributes: nil
+                                                                       error: &error];
+    
+    if (!created && !exist )
+		NSLog(@"Create directory error: %@", error);
+    
+    /* This will create the correct path to save the waJID in the Addresses directory
+    * otherwise the path created will be: <parentsDirectories...>/AddresseswaJID,
+    * that's wrong
+    */
+    [gPath appendString:@"/"];
+    
 	fileName = @"waJID";
 	filePath = [[NSMutableString alloc] initWithString:gPath];
 	[filePath appendString:fileName];

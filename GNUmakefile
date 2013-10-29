@@ -52,6 +52,7 @@ StepChat_OBJC_FILES = \
         RosterController.m\
         TRUserDefaults.m\
         XMLLog.m\
+	Ciao.m\
         main.m
 
 ADDITIONAL_LDFLAGS += -lEtoileXML -lXMPPKit -lAddresses -lssl -lcrypto -g \
