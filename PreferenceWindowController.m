@@ -86,20 +86,35 @@
 	[dndColour setColor:[pref colourForPresence:PRESENCE_DND]];
 	[offlineColour setColor:[pref colourForPresence:PRESENCE_OFFLINE]];
 	[unknownColour setColor:[pref colourForPresence:PRESENCE_UNKNOWN]];
-	NSString * soundName = [pref stringForKey:@"OnlineSound"];
-	if(soundName != nil)
+	NSString * soundName = [pref objectForKey:@"OnlineSound"];
+	/* little workaround with the help of else block to avoid the soundName ever empty string
+	 * until the problem will be discovered and fixed correctly 
+	 */
+	if(soundName != nil && ![soundName isEqual:@""])
 	{
 		[onlineSoundBox setStringValue:soundName];
 	}
+	else
+	{
+		[onlineSoundBox setStringValue:@"Submarine"];
+	}
 	soundName = [pref stringForKey:@"OfflineSound"];
-	if(soundName != nil)
+	if(soundName != nil && ![soundName isEqual:@""])
 	{
 		[offlineSoundBox setStringValue:soundName];
 	}
+	else
+	{
+		[offlineSoundBox setStringValue:@"Pop"];
+	}
 	soundName = [pref stringForKey:@"MessageSound"];
-	if(soundName != nil)
+	if(soundName != nil && ![soundName isEqual:@""])
 	{
 		[messageSoundBox setStringValue:soundName];
+	}
+	else
+	{
+		[messageSoundBox setStringValue:@"Hero"];
 	}
 	[super showWindow:_sender];
 }
