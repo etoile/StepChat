@@ -204,9 +204,4 @@ NSString * passwordForJID(JID * aJID)
 	return account;
 }
 
-- (IBAction) showDebugDiscoWindow:(id) sender
-{
-	[window showWindow:sender];
-}
-
 @end
