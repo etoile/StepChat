@@ -1,0 +1,142 @@
+{
+    "## Comment" = "Do NOT change this file, Gorm maintains it";
+    AddContactWindowController = {
+	Actions = (
+	);
+	Outlets = (
+	);
+	Super = NSWindowController;
+    };
+    ChatLogMenuController = {
+	Actions = (
+	    "openChatLog:"
+	);
+	Outlets = (
+	);
+	Super = NSObject;
+    };
+    CustomPresenceWindowController = {
+	Actions = (
+	    "okay:",
+	    "cancel:"
+	);
+	Outlets = (
+	    message,
+	    name,
+	    presence
+	);
+	Super = NSWindowController;
+    };
+    DiscoDebugController = {
+	Actions = (
+	    "serviceDiscovery:",
+	    "closeWindow:"
+	);
+	Outlets = (
+	    discoInfoBox,
+	    discoItemBox
+	);
+	Super = NSWindowController;
+    };
+    FirstResponder = {
+	Actions = (
+	    "addPerson:",
+	    "away:",
+	    "chat:",
+	    "closeWindow:",
+	    "custom:",
+	    "dnd:",
+	    "none:",
+	    "offline:",
+	    "okay:",
+	    "online:",
+	    "openChatLog:",
+	    "playMessageSound:",
+	    "playOfflineSound:",
+	    "playOnlineSound:",
+	    "remove:",
+	    "selectMessageSound:",
+	    "selectOfflineSound:",
+	    "selectOnlineSound:",
+	    "serviceDiscovery:",
+	    "setCustomPresence:",
+	    "showDebugDiscoWindow:",
+	    "showRosterWindow:",
+	    "xa:"
+	);
+	Super = NSObject;
+    };
+    HideMenuController = {
+	Actions = (
+	    "offline:",
+	    "xa:",
+	    "away:",
+	    "none:",
+	    "dnd:"
+	);
+	Outlets = (
+	    current
+	);
+	Super = NSObject;
+    };
+    JabberApp = {
+	Actions = (
+	    "setCustomPresence:",
+	    "showRosterWindow:",
+	    "showDebugDiscoWindow:"
+	);
+	Outlets = (
+	    customPresenceWindow,
+	    debugMenu,
+	    xmlLogBox,
+	    window
+	);
+	Super = NSObject;
+    };
+    PreferenceWindowController = {
+	Actions = (
+	    "selectMessageSound:",
+	    "playMessageSound:",
+	    "selectOfflineSound:",
+	    "playOnlineSound:",
+	    "playOfflineSound:",
+	    "selectOnlineSound:"
+	);
+	Outlets = (
+	    offlineColour,
+	    dndColour,
+	    onlineSoundBox,
+	    onlineColour,
+	    offlineSoundBox,
+	    chatColour,
+	    xaColour,
+	    messageSoundBox,
+	    awayColour,
+	    unknownColour
+	);
+	Super = NSWindowController;
+    };
+    PresenceLogController = {
+	Actions = (
+	);
+	Outlets = (
+	    view
+	);
+	Super = NSWindowController;
+    };
+    PresenceMenuController = {
+	Actions = (
+	    "offline:",
+	    "custom:",
+	    "chat:",
+	    "xa:",
+	    "online:",
+	    "away:",
+	    "dnd:"
+	);
+	Outlets = (
+	    current
+	);
+	Super = NSObject;
+    };
+}
