@@ -19,7 +19,8 @@
 	IBOutlet CustomPresenceWindowController * customPresenceWindow;
 	IBOutlet NSMenuItem * debugMenu;
 	IBOutlet NSTextView * xmlLogBox;  
-	AccountWindowController * accountWindow;      
+	AccountWindowController * accountWindow;     
+	IBOutlet NSWindowController *window; 
 }
 - (void) reconnect;
 - (void) redrawRosters;
@@ -29,4 +30,5 @@
 - (XMPPAccount*) account;
 - (IBAction) showRosterWindow:(id)_sender;
 - (NSTextView*) xmlLogBox;
+- (IBAction) showDebugDiscoWindow:(id)sender;
 @end

@@ -2,13 +2,8 @@
     "## Comment" = "Do NOT change this file, Gorm maintains it";
     AddContactWindowController = {
 	Actions = (
-	    "cancel:",
-	    "addPerson:"
 	);
 	Outlets = (
-	    jid,
-	    name,
-	    group
 	);
 	Super = NSWindowController;
     };
@@ -19,13 +14,6 @@
 	Outlets = (
 	);
 	Super = NSObject;
-    };
-    Ciao = {
-	Actions = (
-	);
-	Outlets = (
-	);
-	Super = NSWindowController;
     };
     CustomPresenceWindowController = {
 	Actions = (
@@ -39,11 +27,23 @@
 	);
 	Super = NSWindowController;
     };
+    DiscoDebugController = {
+	Actions = (
+	    "serviceDiscovery:",
+	    "closeWindow:"
+	);
+	Outlets = (
+	    discoInfoBox,
+	    discoItemBox
+	);
+	Super = NSWindowController;
+    };
     FirstResponder = {
 	Actions = (
 	    "addPerson:",
 	    "away:",
 	    "chat:",
+	    "closeWindow:",
 	    "custom:",
 	    "dnd:",
 	    "none:",
@@ -58,7 +58,9 @@
 	    "selectMessageSound:",
 	    "selectOfflineSound:",
 	    "selectOnlineSound:",
+	    "serviceDiscovery:",
 	    "setCustomPresence:",
+	    "showDebugDiscoWindow:",
 	    "showRosterWindow:",
 	    "xa:"
 	);
@@ -79,13 +81,15 @@
     };
     JabberApp = {
 	Actions = (
+	    "setCustomPresence:",
 	    "showRosterWindow:",
-	    "setCustomPresence:"
+	    "showDebugDiscoWindow:"
 	);
 	Outlets = (
 	    customPresenceWindow,
 	    debugMenu,
-	    xmlLogBox
+	    xmlLogBox,
+	    window
 	);
 	Super = NSObject;
     };
