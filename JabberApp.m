@@ -37,7 +37,7 @@ NSString * passwordForJID(JID * aJID)
 	if(status == noErr)
 	{
 		NSString * password = [NSString stringWithCString:strdup(passwordData)
-                                                   length:passwordLength];
+                                                 encoding:NSUTF8StringEncoding];
 		SecKeychainItemFreeContent(NULL,passwordData);
 		return password;
 	}

@@ -26,7 +26,7 @@
 
 - (void) discoFeaturesLog:(XMPPDiscoInfo*)anInfo
 {
-	NSInteger index = 0;
+	NSUInteger index = 0;
 	NSArray *features = [info features];
 	NSTextStorage *storage = [discoInfoBox textStorage];
 	[storage beginEditing];
@@ -40,7 +40,7 @@
 
 - (void) discoItemsLog:(XMPPDiscoItems*)anItem
 {
-	NSInteger index = 0;
+	NSUInteger index = 0;
 	NSTextStorage *storage = [discoItemBox textStorage];
 	NSArray *itemsSet = [anItem items];
 	[storage beginEditing];

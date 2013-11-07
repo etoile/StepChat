@@ -121,12 +121,12 @@
 - (void) loadSoundForComboBox:(NSComboBox*)_box
 {
 	NSOpenPanel * openPanel = [NSOpenPanel openPanel];
-    [openPanel setAllowsMultipleSelection:NO];	
-    if ([openPanel runModalForDirectory:@"/System/Library/Sounds" 
-								file:nil
-							   types:[NSSound soundUnfilteredFileTypes]] == NSOKButton) 
+    [openPanel setAllowsMultipleSelection:NO];
+	[openPanel setDirectoryURL:[[NSURL alloc] initWithString:@"/System/Library/Sounds"]];
+    [openPanel setAllowedFileTypes:[NSSound soundUnfilteredTypes]];
+    if ([openPanel runModal] == NSOKButton)
 	{
-		[_box setStringValue:[[openPanel filenames] objectAtIndex:0]];
+		[_box setStringValue:[[openPanel URLs] objectAtIndex:0]];
     }
 }
 - (IBAction) selectOnlineSound:(id)_sender

@@ -59,7 +59,7 @@ License: Modified BSD
 	}
 	else
 	{
-		BOOL done = [fileManager createFileAtPath:aPath contents:nil attributes:nil];
+		[fileManager createFileAtPath:aPath contents:nil attributes:nil];
 		return @"N";
 	}
   

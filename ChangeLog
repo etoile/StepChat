@@ -1,3 +1,9 @@
+20013-11-7	Alessandro Sangiuliano ,“Slex”, <alex22_7 at hotmail dot com>
+	* StepChat: Added MainMenu.xib;
+		    Fixed MainMenu.nib;
+	* MessageWindowController.m: Fixed a bug
+	* StepChat: others minor changes to fix Cocoa compatibility
+
 2006-05-12 Yen-Ju Chen <yjchenx at gmail>
 
 	* xmpp/Roster.h:

@@ -31,7 +31,6 @@
 		283D79DE0C833E8800986BBA /* XMLLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 28135C9808ACE3780032967E /* XMLLog.m */; };
 		283D79E50C833E9700986BBA /* TRUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 285F6FE8073820CA00FD5D67 /* TRUserDefaults.m */; };
 		283D79E90C833E9D00986BBA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
-		283D7C360C838B3900986BBA /* HTMLTestWindow.nib in Resources */ = {isa = PBXBuildFile; fileRef = 283D7C340C838B3900986BBA /* HTMLTestWindow.nib */; };
 		283D7CAF0C838F5C00986BBA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		285F6FE9073820CA00FD5D67 /* TRUserDefaults.h in Headers */ = {isa = PBXBuildFile; fileRef = 285F6FE7073820CA00FD5D67 /* TRUserDefaults.h */; };
 		2860DD33072541760081D50C /* MessageWindow.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2860DD32072541760081D50C /* MessageWindow.nib */; };
@@ -50,9 +49,13 @@
 		668A6C82181EE62E00D9341A /* XMPPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668A6C7F181EE61400D9341A /* XMPPKit.framework */; };
 		668A6C87181EE70800D9341A /* SCAccountInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 668A6C85181EE70800D9341A /* SCAccountInfoManager.m */; };
 		668A6C88181EE70800D9341A /* SCAccountInfoManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 668A6C86181EE70800D9341A /* SCAccountInfoManager.h */; };
-		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		FA3C31A6182A38EF0030D2F9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3C31A4182A38EF0030D2F9 /* MainMenu.xib */; };
+		FA8064EB1825657C006E6334 /* DiscoDebugController.h in Headers */ = {isa = PBXBuildFile; fileRef = FA8064E91825657C006E6334 /* DiscoDebugController.h */; };
+		FA8064EC1825657C006E6334 /* DiscoDebugController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8064EA1825657C006E6334 /* DiscoDebugController.m */; };
+		FAFA4B201827C11800608E0D /* XMLLogWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = FAFA4B1E1827C11800608E0D /* XMLLogWindowController.h */; };
+		FAFA4B211827C11800608E0D /* XMLLogWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFA4B1F1827C11800608E0D /* XMLLogWindowController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,7 +118,6 @@
 		2835875D063D4D7F008F21EA /* JabberApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JabberApp.h; sourceTree = "<group>"; };
 		2835875E063D4D7F008F21EA /* JabberApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JabberApp.m; sourceTree = "<group>"; };
 		283D7C210C838A8200986BBA /* XHTMLTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XHTMLTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		283D7C350C838B3900986BBA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/HTMLTestWindow.nib; sourceTree = "<group>"; };
 		285F6FE7073820CA00FD5D67 /* TRUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRUserDefaults.h; sourceTree = "<group>"; };
 		285F6FE8073820CA00FD5D67 /* TRUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRUserDefaults.m; sourceTree = "<group>"; };
 		2860DE4B07259CF70081D50C /* PreferenceWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferenceWindowController.h; sourceTree = "<group>"; };
@@ -139,7 +141,6 @@
 		28F99A1F0C05E2FC001D0306 /* NSTextView+ClickableLinks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTextView+ClickableLinks.h"; sourceTree = "<group>"; };
 		28F99A200C05E2FC001D0306 /* NSTextView+ClickableLinks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTextView+ClickableLinks.m"; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* Jabber_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Jabber_Prefix.pch; sourceTree = "<group>"; };
@@ -151,6 +152,11 @@
 		668A6C86181EE70800D9341A /* SCAccountInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAccountInfoManager.h; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* StepChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StepChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA3C31A5182A38EF0030D2F9 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		FA8064E91825657C006E6334 /* DiscoDebugController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoDebugController.h; sourceTree = "<group>"; };
+		FA8064EA1825657C006E6334 /* DiscoDebugController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoDebugController.m; sourceTree = "<group>"; };
+		FAFA4B1E1827C11800608E0D /* XMLLogWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLLogWindowController.h; sourceTree = "<group>"; };
+		FAFA4B1F1827C11800608E0D /* XMLLogWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLLogWindowController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,8 +233,10 @@
 		28C501F606B2684700CE9114 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				668A6C85181EE70800D9341A /* SCAccountInfoManager.m */,
+				FA8064E91825657C006E6334 /* DiscoDebugController.h */,
+				FA8064EA1825657C006E6334 /* DiscoDebugController.m */,
 				668A6C86181EE70800D9341A /* SCAccountInfoManager.h */,
+				668A6C85181EE70800D9341A /* SCAccountInfoManager.m */,
 				3BC84C2A0BE37830002833ED /* AccountWindowController.h */,
 				3BC84C2B0BE37830002833ED /* AccountWindowController.m */,
 				28A5470607C66A3500595357 /* ChatLogMenuController.h */,
@@ -255,6 +263,8 @@
 				28F698B50C036A6B007BE36F /* PresenceLogController.m */,
 				28F99A1F0C05E2FC001D0306 /* NSTextView+ClickableLinks.h */,
 				28F99A200C05E2FC001D0306 /* NSTextView+ClickableLinks.m */,
+				FAFA4B1E1827C11800608E0D /* XMLLogWindowController.h */,
+				FAFA4B1F1827C11800608E0D /* XMLLogWindowController.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -288,15 +298,14 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FA3C31A4182A38EF0030D2F9 /* MainMenu.xib */,
 				2812F0FF0BF60FF10041AAE4 /* StepChat.icns */,
 				3BC84C250BE28B6F002833ED /* AccountBox.nib */,
 				2860DD32072541760081D50C /* MessageWindow.nib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
-				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
 				2860DD34072541920081D50C /* RosterWindow.nib */,
 				2860DD360725419A0081D50C /* PasswordBox.nib */,
-				283D7C340C838B3900986BBA /* HTMLTestWindow.nib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -334,6 +343,7 @@
 				668A6C88181EE70800D9341A /* SCAccountInfoManager.h in Headers */,
 				2888DE9C0719AA6C00A44A41 /* CustomPresenceWindowController.h in Headers */,
 				2860DE4D07259CF70081D50C /* PreferenceWindowController.h in Headers */,
+				FAFA4B201827C11800608E0D /* XMLLogWindowController.h in Headers */,
 				285F6FE9073820CA00FD5D67 /* TRUserDefaults.h in Headers */,
 				2815EF1607660F630078C5AE /* AddContactWindowController.h in Headers */,
 				28A5470807C66A3500595357 /* ChatLogMenuController.h in Headers */,
@@ -341,6 +351,7 @@
 				3BC84C2C0BE37830002833ED /* AccountWindowController.h in Headers */,
 				28F698B60C036A6B007BE36F /* PresenceLogController.h in Headers */,
 				28F99A210C05E2FC001D0306 /* NSTextView+ClickableLinks.h in Headers */,
+				FA8064EB1825657C006E6334 /* DiscoDebugController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +410,7 @@
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				en,
+				English,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* Jabber */;
 			projectDirPath = "";
@@ -431,7 +443,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				283D7C360C838B3900986BBA /* HTMLTestWindow.nib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,13 +450,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				2860DD33072541760081D50C /* MessageWindow.nib in Resources */,
 				2860DD35072541920081D50C /* RosterWindow.nib in Resources */,
 				2860DD370725419A0081D50C /* PasswordBox.nib in Resources */,
 				3BC84C270BE28B6F002833ED /* AccountBox.nib in Resources */,
 				2812F1000BF60FF10041AAE4 /* StepChat.icns in Resources */,
+				FA3C31A6182A38EF0030D2F9 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +469,7 @@
 			files = (
 				283D79DE0C833E8800986BBA /* XMLLog.m in Sources */,
 				668A6C87181EE70800D9341A /* SCAccountInfoManager.m in Sources */,
+				FA8064EC1825657C006E6334 /* DiscoDebugController.m in Sources */,
 				283D79D00C833E7B00986BBA /* AccountWindowController.m in Sources */,
 				283D79D10C833E7B00986BBA /* AddContactWindowController.m in Sources */,
 				283D79D20C833E7B00986BBA /* ChatLogMenuController.m in Sources */,
@@ -471,6 +483,7 @@
 				283D79DA0C833E7B00986BBA /* PresenceLogController.m in Sources */,
 				283D79DB0C833E7B00986BBA /* PresenceMenuController.m in Sources */,
 				283D79DC0C833E7B00986BBA /* RosterController.m in Sources */,
+				FAFA4B211827C11800608E0D /* XMLLogWindowController.m in Sources */,
 				283D79E50C833E9700986BBA /* TRUserDefaults.m in Sources */,
 				283D79E90C833E9D00986BBA /* main.m in Sources */,
 			);
@@ -503,14 +516,6 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		283D7C340C838B3900986BBA /* HTMLTestWindow.nib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				283D7C350C838B3900986BBA /* English */,
-			);
-			name = HTMLTestWindow.nib;
-			sourceTree = "<group>";
-		};
 		2860DD32072541760081D50C /* MessageWindow.nib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -535,20 +540,20 @@
 			name = PasswordBox.nib;
 			sourceTree = "<group>";
 		};
-		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				29B97319FDCFA39411CA2CEA /* English */,
-			);
-			name = MainMenu.nib;
-			sourceTree = "<group>";
-		};
 		3BC84C250BE28B6F002833ED /* AccountBox.nib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				3BC84C260BE28B6F002833ED /* English */,
 			);
 			name = AccountBox.nib;
+			sourceTree = "<group>";
+		};
+		FA3C31A4182A38EF0030D2F9 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA3C31A5182A38EF0030D2F9 /* English */,
+			);
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -781,11 +786,14 @@
 			buildSettings = {
 				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				DEPLOYMENT_LOCATION = NO;
 				FRAMEWORK_SEARCH_PATHS = $BUILT_PRODUCTS_DIR;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
 				SDKROOT = macosx;
+				STRIP_INSTALLED_PRODUCT = NO;
 			};
 			name = Debug;
 		};
@@ -794,9 +802,12 @@
 			buildSettings = {
 				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				DEPLOYMENT_LOCATION = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
 				SDKROOT = macosx;
+				STRIP_INSTALLED_PRODUCT = NO;
 			};
 			name = Release;
 		};
@@ -805,9 +816,12 @@
 			buildSettings = {
 				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				DEPLOYMENT_LOCATION = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
 				SDKROOT = macosx;
+				STRIP_INSTALLED_PRODUCT = NO;
 			};
 			name = Default;
 		};

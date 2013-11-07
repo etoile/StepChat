@@ -259,7 +259,7 @@ static NSMutableArray * messageWindowControllers = nil;
 	[presenceBox setToolTip:_message];
 	
 	[presenceIconBox setTextColor:[[NSUserDefaults standardUserDefaults] colourForPresence:_status]];
-	[presenceIconBox setStringValue:[NSString stringWithFormat:@"%C", PRESENCE_ICONS[(_status / 10) - 1]]];
+	[presenceIconBox setStringValue:[NSString stringWithFormat:@"%C", (unichar)PRESENCE_ICONS[(_status / 10) - 1]]];
 	//Set the available identities
 	NSString * currentJID = [recipientBox titleOfSelectedItem];
 	[recipientBox removeAllItems];
@@ -268,12 +268,11 @@ static NSMutableArray * messageWindowControllers = nil;
 	{
 		XMPPIdentity * identity =  [identities objectAtIndex:i];
 		NSString * title = [[identity jid] jidString];
-		NSMutableAttributedString * colouredTitle = [NSMutableAttributedString alloc];
 		NSDictionary * colour = [NSDictionary dictionaryWithObject:[[NSUserDefaults standardUserDefaults] colourForPresence:[[identity presence] show]]
 														  forKey:NSForegroundColorAttributeName];
-
-		[colouredTitle initWithString:title
-						   attributes:colour];
+        
+        NSMutableAttributedString * colouredTitle = [[NSMutableAttributedString alloc] initWithString:title
+                                                                                           attributes:colour];
 		[recipientBox addItemWithTitle:title];
 		[[[recipientBox menu] itemWithTitle:title] setAttributedTitle(colouredTitle)];
 	}

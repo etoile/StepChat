@@ -155,7 +155,7 @@ NSMutableArray * rosterControllers = nil;
                           forKey:NSForegroundColorAttributeName];
 		}
 		plainText = [NSString stringWithFormat:@"%C %@", 
-		PRESENCE_ICONS[(onlineState / 10) - 1], [(XMPPPerson*)anObject name]];
+		(unichar)PRESENCE_ICONS[(onlineState / 10) - 1], [(XMPPPerson*)anObject name]];
 	}
 	else if([anObject isKindOfClass:[XMPPIdentity class]])
 	{
@@ -823,7 +823,7 @@ inline static XMPPConversation * createChatWithPerson(id self, XMPPPerson* perso
 		{
 			int p = ([[[item defaultIdentity] presence] show] / 10) - 1;
 			NSString * prefix = [NSString stringWithFormat:@"%C ", 
-			PRESENCE_ICONS[p]];
+			(unichar)PRESENCE_ICONS[p]];
 			if([prefix isEqualToString:[object substringToIndex:2]])
 			{
 				object = [object substringFromIndex:2];
