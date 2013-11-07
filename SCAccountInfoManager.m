@@ -113,30 +113,5 @@ License: Modified BSD
 	}
 }
 
-- (NSString*) composeNewJIDWithOldJID:(JID*)oldJID withServer:(NSString*)aServer
-{
-	NSString *oldJid;
-	oldJid = [oldJID jidString];
-	NSRange checker = [oldJid rangeOfString:@"@"];
-	NSString *aux;
-	NSMutableString *newJID;
-
-	if (checker.location != NSNotFound || checker.length != 0)
-	{
-		aux = [oldJid substringToIndex:checker.location+1];
-		newJID = [[NSMutableString alloc] initWithString:aux];
-		[newJID appendString:aServer];
-	}
-	else
-	{
-		newJID = [[NSMutableString alloc] initWithString:oldJid];
-		[newJID appendString:@"@"];
-		[newJID appendString:aServer];
-	}
-
-	return newJID;
-}
-
-
 @end
     

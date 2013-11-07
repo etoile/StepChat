@@ -40,9 +40,5 @@ License: Modified BSD
  * Write a JID to a file at a given path
  */
 - (void) writeJIDToFile:(JID*)aJID atPath:(NSString*)aPath;
-/**
- * Compose a new JID from an old one
- */
-- (NSString*) composeNewJIDWithOldJID:(JID*)oldJID withServer:(NSString*)aServer;
 
 @end

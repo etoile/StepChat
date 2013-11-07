@@ -21,15 +21,20 @@
 	{
 		[XMPPAccount setDefaultJID:myJID withServer:myServer];
 		manager = [[SCAccountInfoManager alloc] init];
-		NSString *newJid = [manager composeNewJIDWithOldJID:myJID
-                                                 withServer:myServer];
-		JID *newJID = [JID jidWithString:newJid];
-		[manager writeJIDToFile:newJID atPath:[manager filePath]];
+		[manager writeJIDToFile:myJID atPath:[manager filePath]];
 	}
 	else
 	{
-		[XMPPAccount setDefaultJID:myJID];
-		manager = [[SCAccountInfoManager alloc] init];
+        if ([[myJID domain] isEqualToString:@"gmail.com"])
+        {
+            myServer = @"talk.google.com";
+            [XMPPAccount setDefaultJID:myJID withServer:myServer];
+        }
+        else
+        {
+            [XMPPAccount setDefaultJID:myJID];
+        }
+        manager = [[SCAccountInfoManager alloc] init];
 		[manager writeJIDToFile:myJID atPath:[manager filePath]];
 	}
 	[[self window] close];
