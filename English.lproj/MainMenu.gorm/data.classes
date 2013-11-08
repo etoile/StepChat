@@ -2,8 +2,13 @@
     "## Comment" = "Do NOT change this file, Gorm maintains it";
     AddContactWindowController = {
 	Actions = (
+	    "addPerson:",
+	    "cancel:"
 	);
 	Outlets = (
+	    jid,
+	    name,
+	    group
 	);
 	Super = NSWindowController;
     };
