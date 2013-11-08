@@ -29,6 +29,9 @@
 													  withName:rosterName
 													   inGroup:rosterGroup];
 	[[self window] performClose:self];
+	[name setStringValue:@""];
+	[group setStringValue:@""];
+	[jid setStringValue:@""];
 }
 
 - (IBAction) cancel:(id)_sender
