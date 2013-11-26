@@ -9,6 +9,7 @@
 #import "JabberApp.h"
 #import "PasswordWindowController.h"
 #import "JabberApp.h"
+#import "PreferenceWindowController.h"
 
 NSString * passwordForJID(JID * aJID)
 {
