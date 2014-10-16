@@ -36,11 +36,11 @@ NSString * passwordForJID(JID * aJID)
                                                       NULL);
 	if(status == noErr)
 	{
-		NSString * password = [NSString stringWithCString:strdup(passwordData)
-                                                 encoding:NSUTF8StringEncoding];
-		SecKeychainItemFreeContent(NULL,passwordData);
+        NSString * password = [NSString stringWithUTF8String:passwordData];
+        SecKeychainItemFreeContent(NULL,passwordData);
 		return password;
 	}
+    //could be necessary to add a free(passwordData), I have to investigate
 	return nil;
 #endif
 }
@@ -98,8 +98,10 @@ NSString * passwordForJID(JID * aJID)
 		{
 			jidString = [jids valueAtIndex:0];
 		}*/
+        
+        //it was a while better investigation in near future
 
-		while (nil == jidString || [jidString isEqualToString:@"N"])
+		if (nil == jidString || [jidString isEqualToString:@"N"])
 		{
 			[self getAccountInfo];
 			jidString = [manager readJIDFromFileAtPath:[manager filePath]];
@@ -108,7 +110,6 @@ NSString * passwordForJID(JID * aJID)
 			{
 				jidString = [jids valueAtIndex:0];
 			}*/
-
 		}
 
 		JID *tmpJid = [JID jidWithString:jidString];

@@ -305,10 +305,5 @@ static NSMutableArray * messageWindowControllers = nil;
 {
 	[conversation setJID:[JID jidWithString:[recipientBox titleOfSelectedItem]]];
 }
-
-- (void) dealloc
-{
-	[messageWindowControllers removeObject:self];
-}
 @end
 
