@@ -20,7 +20,7 @@
 			       name:@"XMPPDiscoItemsFound"
 				 object:nil];
 
-	disco = [[[[NSApp delegate] account] roster] disco];
+	disco = [[[(JabberApp*)[NSApp delegate ] account] roster] disco];
 	[super showWindow:_sender];
 }
 
@@ -67,7 +67,7 @@
 
 	if (discoItems == nil)
 	{
-		connection = [[[NSApp delegate] account] connection];
+		connection = [[(JabberApp*)[NSApp delegate] account] connection];
 		NSString *server = [connection server];
 		[disco sendQueryToJID:server node:nil inNamespace:xmlnsXMPPDiscoItems];
 	}
@@ -78,7 +78,7 @@
 
 	if (info == nil)
 	{
-		connection = [[[NSApp delegate] account] connection];
+		connection = [[(JabberApp*)[NSApp delegate] account] connection];
 		NSString *server = [connection server];
 		[disco sendQueryToJID:server node:nil inNamespace:xmlnsXMPPDiscoInfo];
 	}
