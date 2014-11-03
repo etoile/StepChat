@@ -139,17 +139,27 @@ static NSMutableArray * messageWindowControllers = nil;
 
 - (void) textDidEndEditing:(NSNotification *)aNotification
 {
+	//[editingBox setRichText:YES];
+#ifdef GNUSTEP
+	NSDictionary *attributes = [editingBox typingAttributes];
+	NSAttributedString *attributedString;
+#endif
 	if(![[editingBox string] isEqualToString:@""]
 	   &&
 	   [[[aNotification userInfo] objectForKey:@"NSTextMovement"] intValue] == NSReturnTextMovement)
-	{
+		{
 		if([editingBox isRichText])
 		{
-			[conversation sendText:[editingBox textStorage]];
+#ifdef GNUSTEP
+			attributedString = [[NSAttributedString alloc] initWithString:[editingBox string] attributes: attributes];
+			[conversation sendText:attributedString];
+#else
+			[conversation sendText:[editingBox string]];
+#endif
 		}
 		else
 		{
-			[conversation sendText:[editingBox string]];
+			[conversation sendText: [editingBox string]];
 		}
 		[editingBox setString:@""];
 		[self resizeEditingBox:self];
